@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1498829219 source:c:\super\interswitch\esb\carnegie-esb-manager\carnegie-esb-manager\main.cpp
+	<iostream>
+	<ESBManager.h>
+
+1499037982 source:c:\super\interswitch\esb\carnegie-esb-manager\carnegie-esb-manager\src\esbmanager.cpp
+	"ESBManager.h"
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<pthread.h>
+	<memory>
+	<string>
+	<cstring>
+	<chrono>
+	<errno.h>
+
+1499037982 c:\super\interswitch\esb\carnegie-esb-manager\carnegie-esb-manager\include\esbmanager.h
+	<string>
+	<vector>
+	<mutex>
+	"DEFS.h"
+	"main.h"
+	"console_commands.h"
+	<pthread.h>
+
+1498775685 c:\super\interswitch\esb\carnegie-esb-manager\carnegie-esb-manager\include\defs.h
+
+1498655225 c:\super\interswitch\esb\carnegie-esb-manager\carnegie-esb-manager\include\main.h
+
+1499032858 c:\super\interswitch\esb\carnegie-esb-manager\carnegie-esb-manager\include\console_commands.h
+
