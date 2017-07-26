@@ -3,7 +3,7 @@
 
 int main()
 {
-    ESBManager esbManager = ESBManager();
+    _ESBManager::ESBManager esbManager = _ESBManager::ESBManager();
     esbManager.InitializeAndStart();
     return (0);
 }

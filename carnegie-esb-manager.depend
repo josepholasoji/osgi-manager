@@ -30,3 +30,197 @@
 
 1499032858 c:\super\interswitch\esb\carnegie-esb-manager\carnegie-esb-manager\include\console_commands.h
 
+1499771454 source:c:\super\carnegie-osgi-manager\main.cpp
+	<iostream>
+	<ESBManager.h>
+
+1500185173 c:\super\carnegie-osgi-manager\include\esbmanager.h
+	<string>
+	<vector>
+	<mutex>
+	"DEFS.h"
+	"main.h"
+	"console_commands.h"
+	<pthread.h>
+	<memory>
+	<map>
+	<regex>
+	"Bundle.h"
+	"SystemInfo.h"
+
+1498775685 c:\super\carnegie-osgi-manager\include\defs.h
+
+1498655225 c:\super\carnegie-osgi-manager\include\main.h
+
+1500160980 c:\super\carnegie-osgi-manager\include\console_commands.h
+
+1500186359 source:c:\super\carnegie-osgi-manager\src\esbmanager.cpp
+	"ESBManager.h"
+	"Bundle.h"
+	"SystemInfo.h"
+	<stdio.h>
+	<stdlib.h>
+	<sys/types.h>
+	<iostream>
+	<pthread.h>
+	<memory>
+	<string>
+	<cstring>
+	<chrono>
+	<errno.h>
+	<memory>
+	<map>
+	<regex>
+	<unistd.h>
+	<sys/types.h>
+	<boost/algorithm/string/classification.hpp>
+	<boost/algorithm/string/split.hpp>
+	"rapidjson/document.h"
+	"rapidjson/writer.h"
+	"rapidjson/stringbuffer.h"
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\document.h
+	"reader.h"
+	"internal/meta.h"
+	"internal/strfunc.h"
+	"memorystream.h"
+	"encodedstream.h"
+	<new>
+	<limits>
+	<iterator>
+	<utility>
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\reader.h
+	"allocators.h"
+	"stream.h"
+	"encodedstream.h"
+	"internal/meta.h"
+	"internal/stack.h"
+	"internal/strtod.h"
+	<limits>
+	<intrin.h>
+	<nmmintrin.h>
+	<emmintrin.h>
+	<arm_neon.h>
+	<stdexcept>
+	"rapidjson/error/error.h"
+	"rapidjson/reader.h"
+	"error/error.h"
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\allocators.h
+	"rapidjson.h"
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\rapidjson.h
+	<cstdlib>
+	<cstring>
+	"rapidjson/..."
+	<string>
+	"msinttypes/stdint.h"
+	"msinttypes/inttypes.h"
+	<stdint.h>
+	<inttypes.h>
+	<endian.h>
+	"rapidjson/..."
+	<cassert>
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\msinttypes\stdint.h
+	<stdint.h>
+	<limits.h>
+	<wchar.h>
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\msinttypes\inttypes.h
+	"stdint.h"
+	<inttypes.h>
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\stream.h
+	"rapidjson.h"
+	"encodings.h"
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\encodings.h
+	"rapidjson.h"
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\encodedstream.h
+	"stream.h"
+	"memorystream.h"
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\memorystream.h
+	"stream.h"
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\internal\meta.h
+	"../rapidjson.h"
+	<type_traits>
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\internal\stack.h
+	"../allocators.h"
+	"swap.h"
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\internal\swap.h
+	"../rapidjson.h"
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\internal\strtod.h
+	"ieee754.h"
+	"biginteger.h"
+	"diyfp.h"
+	"pow10.h"
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\internal\ieee754.h
+	"../rapidjson.h"
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\internal\biginteger.h
+	"../rapidjson.h"
+	<intrin.h>
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\internal\diyfp.h
+	"../rapidjson.h"
+	<intrin.h>
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\internal\pow10.h
+	"../rapidjson.h"
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\error\error.h
+	"../rapidjson.h"
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\internal\strfunc.h
+	"../stream.h"
+	<cwchar>
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\writer.h
+	"stream.h"
+	"internal/meta.h"
+	"internal/stack.h"
+	"internal/strfunc.h"
+	"internal/dtoa.h"
+	"internal/itoa.h"
+	"stringbuffer.h"
+	<new>
+	<intrin.h>
+	<nmmintrin.h>
+	<emmintrin.h>
+	<arm_neon.h>
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\internal\dtoa.h
+	"itoa.h"
+	"diyfp.h"
+	"ieee754.h"
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\internal\itoa.h
+	"../rapidjson.h"
+
+1498621015 c:\super\carnegie-osgi-manager\include\rapidjson\stringbuffer.h
+	"stream.h"
+	"internal/stack.h"
+	<utility>
+	"internal/stack.h"
+
+1499771501 c:\super\carnegie-osgi-manager\include\bundle.h
+	<string>
+
+1500185051 c:\super\carnegie-osgi-manager\include\systeminfo.h
+	<string>
+
+1499771622 source:c:\super\carnegie-osgi-manager\src\bundle.cpp
+	"Bundle.h"
+
+1500185627 source:c:\super\carnegie-osgi-manager\src\systeminfo.cpp
+	"SystemInfo.h"
+
