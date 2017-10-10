@@ -1,3 +1,6 @@
+#define __USE_MINGW_ANSI_STDIO 0
+
+#include <windows.h>
 #include "ESBManager.h"
 #include "Bundle.h"
 #include "SystemInfo.h"
@@ -10,6 +13,7 @@
 #include <memory>
 #include <string>
 #include <cstring>
+#include <sstream>
 #include <chrono>
 #include <errno.h>
 #include <memory>
@@ -24,13 +28,31 @@
 #include "rapidjson/writer.h"
 #include "rapidjson/stringbuffer.h"
 
+//#include <simple_web_server/server_http.hpp>
+
+// Added for the json-example
+#include <boost/property_tree/json_parser.hpp>
+#include <boost/property_tree/ptree.hpp>
+
+// Added for the default_resource example
+#include <algorithm>
+#include <boost/filesystem.hpp>
+#include <fstream>
+#include <vector>
+#include "server.h"
+
+
+#ifdef HAVE_OPENSSL
+    #include "crypto.hpp"
+#endif
+
 #define CHARACTER_STREAM_BUFFER_LENGTH  1027
 #define THREAD_SLEEP_TIME               1000
 #define MAXIMUM_LOAD_COUNT              1800 //Approximately 30min
 #define RETURNED_FAILURE_DATALENGTH     50
 
-/*extern "C" FILE* popen(const char* command, const char* mode);
-extern "C" FILE* pclose(FILE*);*/
+//extern "C" FILE* popen(const char* command, const char* mode);
+//extern "C" FILE* pclose(FILE*);
 
 WORD _ESBManager::ESBManager::event;
 bool _ESBManager::ESBManager::continueRunning;
@@ -65,6 +87,7 @@ std::string _ESBManager::ESBManager::gogoUserName = "";
 std::string _ESBManager::ESBManager::gogoPassword = "";
 std::string _ESBManager::ESBManager::workingDir = "";
 
+//typedef SimpleWeb::Server<SimpleWeb::HTTP> HttpServer;
 
 void* _ESBManager::ESBManager::Start(void* param)
 {
@@ -124,7 +147,7 @@ void _ESBManager::ESBManager::InitializeAndStart()
 {
     printf("Manager starting...");
     _ESBManager::ESBManager::continueRunning = true;
-    pthread_t StartKaraf;
+    pthread_t StartKaraf, _StartRESTServer;
 
     const int FILE_READ_CHUNK_SIZE = 1024;
     std::string configString = "";
@@ -223,6 +246,7 @@ void _ESBManager::ESBManager::InitializeAndStart()
             _ESBManager::ESBManager::GogoReady(true);
             _ESBManager::ESBManager::FireCommandOperationInProgress(false);
             pthread_create(&StartKaraf, NULL, _ESBManager::ESBManager::StartMonitorService, NULL);
+            pthread_create(&_StartRESTServer, NULL, _ESBManager::ESBManager::StartRESTServer, NULL);
         }
 
         Sleep((THREAD_SLEEP_TIME * 5));
@@ -327,7 +351,11 @@ std::string _ESBManager::ESBManager::BuildBundlesToStart(std::map<std::string, _
             _ESBManager::Bundle* bundle = bundlesWithNameAndId[_bundleName];
 
             if((bundle->spring != "Started") && (bundle->spring != "Waiting"))
+            {
                 bundleStartIdString += bundle->id + " ";
+                bundle->incrementReStartCount();
+                bundle->addRestartAttemptTime(std::chrono::milliseconds);
+            }
         }
     }
 
@@ -338,7 +366,11 @@ std::string _ESBManager::ESBManager::BuildBundlesToStart(std::map<std::string, _
             _ESBManager::Bundle* bundle = bundlesWithNameAndId[_bundleName];
 
             if((bundle->spring != "Started") && (bundle->spring != "Waiting"))
+            {
                 bundleStartIdString += bundle->id + " ";
+                bundle->incrementReStartCount();
+                bundle->addRestartAttemptTime(std::chrono::milliseconds);
+            }
         }
     }
 
@@ -377,11 +409,6 @@ _ESBManager::SystemInfo _ESBManager::ESBManager::GetSystemInfo(std::string syste
 
 void* _ESBManager::ESBManager::StartMonitorService(void* threadPparam)
 {
-    std::map<std::string, _ESBManager::Bundle*> bundlesWithNameAndId;
-    std::vector<std::string> deadBundles;
-    std::vector<std::string> failedBundles;
-    std::vector<std::string> inferBundlesToEscalateByNotitifacation;
-
     while (_ESBManager::ESBManager::continueRunning)
     {
         if(_ESBManager::ESBManager::IsGogoReady() && !_ESBManager::ESBManager::IsFireCommandOperationInProgress())
@@ -393,14 +420,28 @@ void* _ESBManager::ESBManager::StartMonitorService(void* threadPparam)
                 std::string command = _ESBManager::ESBManager::workingDir + "/bin\\" + strBuff;
 
                 std::string bundleList  = _ESBManager::ESBManager::FireCommandExecVP(command);
-                bundlesWithNameAndId    = _ESBManager::ESBManager::MapBundleNamesToBundlesId(bundleList);
-                deadBundles             = _ESBManager::ESBManager::GetDeadBundles(bundlesWithNameAndId);
-                failedBundles           = _ESBManager::ESBManager::GetFailedBundles(bundlesWithNameAndId);
-                inferBundlesToEscalateByNotitifacation = _ESBManager::ESBManager::GetListOfBundlesWhoesStateShouldBeEscalated(bundlesWithNameAndId);
 
-                _ESBManager::ESBManager::bundlesToStart = _ESBManager::ESBManager::BuildBundlesToStart(bundlesWithNameAndId, deadBundles, failedBundles, _ESBManager::ESBManager::processBundles, _ESBManager::ESBManager::systemBundles);
+                auto bundles = _ESBManager::ESBManager::MapBundleNamesToBundlesId(bundleList);
+                if(_ESBManager::ESBManager::bundlesWithNameAndId == NULL)
+                {
+                       _ESBManager::ESBManager::bundlesWithNameAndId = bundles;
+                }
+                else if(_ESBManager::ESBManager::bundlesWithNameAndId.size() != bundles.size())
+                {
+                        _ESBManager::ESBManager::bundlesWithNameAndId = bundles;
+                }
+
+                //_ESBManager::ESBManager::bundlesWithNameAndId    =
+                _ESBManager::ESBManager::deadBundles             = _ESBManager::ESBManager::GetDeadBundles(bundlesWithNameAndId);
+                _ESBManager::ESBManager::failedBundles           = _ESBManager::ESBManager::GetFailedBundles(bundlesWithNameAndId);
+                _ESBManager::ESBManager::inferBundlesToEscalateByNotitifacation = _ESBManager::ESBManager::GetListOfBundlesWhoesStateShouldBeEscalated(bundlesWithNameAndId);
+
+                _ESBManager::ESBManager::bundlesToStart = _ESBManager::ESBManager::BuildBundlesToStart(_ESBManager::ESBManager::bundlesWithNameAndId,
+                                                                                                       _ESBManager::ESBManager::deadBundles,
+                                                                                                       _ESBManager::ESBManager::failedBundles,
+                                                                                                       _ESBManager::ESBManager::processBundles,
+                                                                                                       _ESBManager::ESBManager::systemBundles);
                 //_ESBManager::ESBManager::bundlesToStop  = _ESBManager::ESBManager::BuildBundlesToStop(bundlesWithNameAndId, bundleStopList);
-
                 _ESBManager::ESBManager::setLastCommandStr(GOGO_START_BUNDLE);
             }
             else if(_ESBManager::ESBManager::getLastCommandStr().compare(GOGO_GET_SYSTEM_INFO) == 0)
@@ -441,6 +482,12 @@ void* _ESBManager::ESBManager::StartMonitorService(void* threadPparam)
     }
 
     return NULL;
+}
+
+void* _ESBManager::ESBManager::StartRESTServer(void* threadPparam)
+{
+    http::server::server _server("127.0.0.1", "62204", "/");
+    _server.run();
 }
 
 std::string _ESBManager::ESBManager::FireCommandExecVP(std::string command)

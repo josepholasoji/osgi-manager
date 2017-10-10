@@ -39,11 +39,19 @@
 			<Add option="-static-libstdc++" />
 		</Linker>
 		<Unit filename="com.carnegies.esb.manager.cfg" />
+		<Unit filename="include/AppStatusHandler.h" />
 		<Unit filename="include/Bundle.h" />
+		<Unit filename="include/BundleMetricsHandler.h" />
+		<Unit filename="include/ConnectionManager.h" />
+		<Unit filename="include/DEFS.h" />
 		<Unit filename="include/ESBManager.h" />
 		<Unit filename="include/SystemInfo.h" />
+		<Unit filename="include/connection.h" />
+		<Unit filename="include/connection_manager.h" />
 		<Unit filename="include/console_commands.h" />
+		<Unit filename="include/header.h" />
 		<Unit filename="include/main.h" />
+		<Unit filename="include/mime_types.h" />
 		<Unit filename="include/rapidjson/allocators.h" />
 		<Unit filename="include/rapidjson/document.h" />
 		<Unit filename="include/rapidjson/encodedstream.h" />
@@ -79,10 +87,27 @@
 		<Unit filename="include/rapidjson/stream.h" />
 		<Unit filename="include/rapidjson/stringbuffer.h" />
 		<Unit filename="include/rapidjson/writer.h" />
+		<Unit filename="include/reply.h" />
+		<Unit filename="include/request.h" />
+		<Unit filename="include/requestHandle.h" />
+		<Unit filename="include/request_handler.h" />
+		<Unit filename="include/request_parser.h" />
+		<Unit filename="include/server.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/AppStatusHandler.cpp" />
 		<Unit filename="src/Bundle.cpp" />
+		<Unit filename="src/BundleMetricsHandler.cpp" />
+		<Unit filename="src/ConnectionManager.cpp" />
 		<Unit filename="src/ESBManager.cpp" />
 		<Unit filename="src/SystemInfo.cpp" />
+		<Unit filename="src/connection.cpp" />
+		<Unit filename="src/connection_manager.cpp" />
+		<Unit filename="src/mime_types.cpp" />
+		<Unit filename="src/reply.cpp" />
+		<Unit filename="src/requestHandle.cpp" />
+		<Unit filename="src/request_handler.cpp" />
+		<Unit filename="src/request_parser.cpp" />
+		<Unit filename="src/server.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

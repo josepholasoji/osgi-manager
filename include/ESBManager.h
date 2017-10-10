@@ -25,12 +25,23 @@ namespace _ESBManager
 
             static void* Start(void*);
             void InitializeAndStart();
+
+            static _ESBManager::SystemInfo getCurrentSystemInfo(){
+                return _ESBManager::ESBManager::currentSystemInfo;;
+            }
+
+            static auto GetBundlesWithNameAndId(){
+                return _ESBManager::ESBManager::bundlesWithNameAndId;;
+            }
+
+
         protected:
 
         private:
 
             void ShutDown();
             static void* StartMonitorService(void*);
+            static void* StartRESTServer(void*);
             static void* MonitorIfGogoIsReadyForCommand(void*);
 
             static WORD event;
@@ -68,6 +79,9 @@ namespace _ESBManager
             static std::string workingDir;
 
             static std::map<std::string, _ESBManager::Bundle*> bundlesWithNameAndId;
+            static std::vector<std::string> deadBundles;
+            static std::vector<std::string> failedBundles;
+            static std::vector<std::string> inferBundlesToEscalateByNotitifacation;
             static _ESBManager::SystemInfo currentSystemInfo;
 
             static std::string karafStartupCommnad;
