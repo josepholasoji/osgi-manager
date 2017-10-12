@@ -1,0 +1,8 @@
+test -d bin/Debug || mkdir -p bin/Debug
+test -d obj/Debug/src || mkdir -p obj/Debug/src
+test -d obj/Debug || mkdir -p obj/Debug
+g++ -Wall -fexceptions -g  -Iinclude -c src/server.cpp -o obj/Debug/src/server.o
+In file included from src/server.cpp:11:0:
+include/server.h:14:26: fatal error: boost/asio.hpp: No such file or directory
+compilation terminated.
+make: *** [obj/Debug/src/server.o] Error 1

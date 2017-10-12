@@ -1,0 +1,12 @@
+called: C:\MinGW\bin\g++.exe
+	C:\Super\carnegie-osgi-manager
+	C:\MinGW\bin\g++.exe
+	-Wall
+	-fexceptions
+	-g
+	-Iinclude
+	-c
+	src/server.cpp
+	-o
+	obj/Debug/src/server.o
+

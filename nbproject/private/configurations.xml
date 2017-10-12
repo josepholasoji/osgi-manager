@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="bin">
+        <df name="Debug">
+        </df>
+      </df>
+      <df name="include">
+        <df name="openssl">
+          <in>aes.h</in>
+          <in>asn1.h</in>
+          <in>asn1_mac.h</in>
+          <in>asn1t.h</in>
+          <in>bio.h</in>
+          <in>blowfish.h</in>
+          <in>bn.h</in>
+          <in>buffer.h</in>
+          <in>cast.h</in>
+          <in>comp.h</in>
+          <in>conf.h</in>
+          <in>conf_api.h</in>
+          <in>crypto.h</in>
+          <in>des.h</in>
+          <in>des_old.h</in>
+          <in>dh.h</in>
+          <in>dsa.h</in>
+          <in>dso.h</in>
+          <in>dtls1.h</in>
+          <in>e_os2.h</in>
+          <in>ebcdic.h</in>
+          <in>ec.h</in>
+          <in>ecdh.h</in>
+          <in>ecdsa.h</in>
+          <in>engine.h</in>
+          <in>err.h</in>
+          <in>evp.h</in>
+          <in>hmac.h</in>
+          <in>idea.h</in>
+          <in>krb5_asn.h</in>
+          <in>kssl.h</in>
+          <in>lhash.h</in>
+          <in>md2.h</in>
+          <in>md4.h</in>
+          <in>md5.h</in>
+          <in>obj_mac.h</in>
+          <in>objects.h</in>
+          <in>ocsp.h</in>
+          <in>opensslconf.h</in>
+          <in>opensslv.h</in>
+          <in>ossl_typ.h</in>
+          <in>pem.h</in>
+          <in>pem2.h</in>
+          <in>pkcs12.h</in>
+          <in>pkcs7.h</in>
+          <in>pq_compat.h</in>
+          <in>pqueue.h</in>
+          <in>rand.h</in>
+          <in>rc2.h</in>
+          <in>rc4.h</in>
+          <in>ripemd.h</in>
+          <in>rsa.h</in>
+          <in>safestack.h</in>
+          <in>sha.h</in>
+          <in>ssl.h</in>
+          <in>ssl2.h</in>
+          <in>ssl23.h</in>
+          <in>ssl3.h</in>
+          <in>stack.h</in>
+          <in>store.h</in>
+          <in>symhacks.h</in>
+          <in>tls1.h</in>
+          <in>tmdiff.h</in>
+          <in>txt_db.h</in>
+          <in>ui.h</in>
+          <in>ui_compat.h</in>
+          <in>x509.h</in>
+          <in>x509_vfy.h</in>
+          <in>x509v3.h</in>
+        </df>
+        <df name="openssl-0.9.8h-1-lib">
+          <df name="include">
+          </df>
+        </df>
+        <df name="rapidjson">
+          <df name="error">
+            <in>en.h</in>
+            <in>error.h</in>
+          </df>
+          <df name="internal">
+            <in>biginteger.h</in>
+            <in>diyfp.h</in>
+            <in>dtoa.h</in>
+            <in>ieee754.h</in>
+            <in>itoa.h</in>
+            <in>meta.h</in>
+            <in>pow10.h</in>
+            <in>regex.h</in>
+            <in>stack.h</in>
+            <in>strfunc.h</in>
+            <in>strtod.h</in>
+            <in>swap.h</in>
+          </df>
+          <df name="msinttypes">
+            <in>inttypes.h</in>
+            <in>stdint.h</in>
+          </df>
+          <in>allocators.h</in>
+          <in>document.h</in>
+          <in>encodedstream.h</in>
+          <in>encodings.h</in>
+          <in>filereadstream.h</in>
+          <in>filewritestream.h</in>
+          <in>fwd.h</in>
+          <in>istreamwrapper.h</in>
+          <in>memorybuffer.h</in>
+          <in>memorystream.h</in>
+          <in>ostreamwrapper.h</in>
+          <in>pointer.h</in>
+          <in>prettywriter.h</in>
+          <in>rapidjson.h</in>
+          <in>reader.h</in>
+          <in>schema.h</in>
+          <in>stream.h</in>
+          <in>stringbuffer.h</in>
+          <in>writer.h</in>
+        </df>
+        <df name="simple_web_server">
+          <in>client_http.hpp</in>
+          <in>client_https.hpp</in>
+          <in>crypto.hpp</in>
+          <in>server_http.hpp</in>
+          <in>server_https.hpp</in>
+          <in>status_code.hpp</in>
+          <in>utility.hpp</in>
+        </df>
+        <in>AppStatusHandler.h</in>
+        <in>Bundle.h</in>
+        <in>BundleMetricsHandler.h</in>
+        <in>ConnectionManager.h</in>
+        <in>DEFS.h</in>
+        <in>ESBManager.h</in>
+        <in>SystemInfo.h</in>
+        <in>connection.h</in>
+        <in>connection_manager.h</in>
+        <in>console_commands.h</in>
+        <in>handler.h</in>
+        <in>header.h</in>
+        <in>main.h</in>
+        <in>mime_types.h</in>
+        <in>reply.h</in>
+        <in>request.h</in>
+        <in>requestHandle.h</in>
+        <in>request_handler.h</in>
+        <in>request_parser.h</in>
+        <in>server.h</in>
+      </df>
+      <df name="lib">
+        <df name="pkgconfig">
+        </df>
+      </df>
+      <df name="manifest">
+      </df>
+      <df name="obj">
+        <df name="Debug">
+          <df name="src">
+          </df>
+        </df>
+      </df>
+      <df name="rapidjson">
+        <df name="rapidjson-master">
+          <df name="bin">
+            <df name="data">
+            </df>
+            <df name="draft-04">
+            </df>
+            <df name="encodings">
+            </df>
+            <df name="jsonchecker">
+            </df>
+            <df name="jsonschema">
+              <df name="bin">
+              </df>
+              <df name="remotes">
+                <df name="folder">
+                </df>
+              </df>
+              <df name="tests">
+                <df name="draft3">
+                  <df name="optional">
+                  </df>
+                </df>
+                <df name="draft4">
+                  <df name="optional">
+                  </df>
+                </df>
+              </df>
+            </df>
+            <df name="types">
+            </df>
+          </df>
+          <df name="CMakeModules">
+          </df>
+          <df name="doc">
+            <df name="diagram">
+            </df>
+            <df name="logo">
+            </df>
+            <df name="misc">
+            </df>
+          </df>
+          <df name="docker">
+            <df name="debian">
+            </df>
+          </df>
+          <df name="example">
+            <df name="capitalize">
+              <in>capitalize.cpp</in>
+            </df>
+            <df name="condense">
+              <in>condense.cpp</in>
+            </df>
+            <df name="filterkey">
+              <in>filterkey.cpp</in>
+            </df>
+            <df name="filterkeydom">
+              <in>filterkeydom.cpp</in>
+            </df>
+            <df name="jsonx">
+              <in>jsonx.cpp</in>
+            </df>
+            <df name="lookaheadparser">
+              <in>lookaheadparser.cpp</in>
+            </df>
+            <df name="messagereader">
+              <in>messagereader.cpp</in>
+            </df>
+            <df name="parsebyparts">
+              <in>parsebyparts.cpp</in>
+            </df>
+            <df name="pretty">
+              <in>pretty.cpp</in>
+            </df>
+            <df name="prettyauto">
+              <in>prettyauto.cpp</in>
+            </df>
+            <df name="schemavalidator">
+              <in>schemavalidator.cpp</in>
+            </df>
+            <df name="serialize">
+              <in>serialize.cpp</in>
+            </df>
+            <df name="simpledom">
+              <in>simpledom.cpp</in>
+            </df>
+            <df name="simplepullreader">
+              <in>simplepullreader.cpp</in>
+            </df>
+            <df name="simplereader">
+              <in>simplereader.cpp</in>
+            </df>
+            <df name="simplewriter">
+              <in>simplewriter.cpp</in>
+            </df>
+            <df name="tutorial">
+              <in>tutorial.cpp</in>
+            </df>
+          </df>
+          <df name="include">
+          </df>
+          <df name="test">
+            <df name="perftest">
+              <in>misctest.cpp</in>
+              <in>perftest.cpp</in>
+              <in>perftest.h</in>
+              <in>platformtest.cpp</in>
+              <in>rapidjsontest.cpp</in>
+              <in>schematest.cpp</in>
+            </df>
+            <df name="unittest">
+              <in>allocatorstest.cpp</in>
+              <in>bigintegertest.cpp</in>
+              <in>documenttest.cpp</in>
+              <in>dtoatest.cpp</in>
+              <in>encodedstreamtest.cpp</in>
+              <in>encodingstest.cpp</in>
+              <in>filestreamtest.cpp</in>
+              <in>fwdtest.cpp</in>
+              <in>istreamwrappertest.cpp</in>
+              <in>itoatest.cpp</in>
+              <in>jsoncheckertest.cpp</in>
+              <in>namespacetest.cpp</in>
+              <in>ostreamwrappertest.cpp</in>
+              <in>pointertest.cpp</in>
+              <in>prettywritertest.cpp</in>
+              <in>readertest.cpp</in>
+              <in>regextest.cpp</in>
+              <in>schematest.cpp</in>
+              <in>simdtest.cpp</in>
+              <in>strfunctest.cpp</in>
+              <in>stringbuffertest.cpp</in>
+              <in>strtodtest.cpp</in>
+              <in>unittest.cpp</in>
+              <in>unittest.h</in>
+              <in>valuetest.cpp</in>
+              <in>writertest.cpp</in>
+            </df>
+          </df>
+          <df name="thirdparty">
+            <df name="gtest">
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="sources">
+      </df>
+      <df name="src">
+        <in>AppStatusHandler.cpp</in>
+        <in>Bundle.cpp</in>
+        <in>BundleMetricsHandler.cpp</in>
+        <in>ConnectionManager.cpp</in>
+        <in>ESBManager.cpp</in>
+        <in>SystemInfo.cpp</in>
+        <in>connection.cpp</in>
+        <in>connection_manager.cpp</in>
+        <in>handler.cpp</in>
+        <in>header.cpp</in>
+        <in>mime_types.cpp</in>
+        <in>reply.cpp</in>
+        <in>request.cpp</in>
+        <in>requestHandle.cpp</in>
+        <in>request_handler.cpp</in>
+        <in>request_parser.cpp</in>
+        <in>server.cpp</in>
+      </df>
+      <in>main.cpp</in>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>3</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <dbxdebugger version="1">
+        <pathmaps>
+        </pathmaps>
+        <interceptlist>
+          <interceptoptions all="false" unhandled="true" unexpected="true"/>
+        </interceptlist>
+        <signals>
+        </signals>
+        <options>
+          <DebugOptions>
+          </DebugOptions>
+        </options>
+        <buildfirst buildfirst_overriden="false" buildfirst_old="false"/>
+      </dbxdebugger>
+      <dbxrtc version="1">
+        <options>
+          <RtcOptions>
+            <option name="rtc_error_log_file_name" value="/dev/null"/>
+          </RtcOptions>
+        </options>
+        <loadobjs>
+        </loadobjs>
+      </dbxrtc>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

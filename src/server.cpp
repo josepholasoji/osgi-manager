@@ -9,6 +9,8 @@
 //
 
 #include "server.h"
+#include <memory>
+#include <iostream>
 #include <signal.h>
 #include <utility>
 
