@@ -30,7 +30,7 @@ namespace _ESBManager
                 return _ESBManager::ESBManager::currentSystemInfo;;
             }
 
-            static auto GetBundlesWithNameAndId(){
+            static std::map<std::string, _ESBManager::Bundle*> GetBundlesWithNameAndId(){
                 return _ESBManager::ESBManager::bundlesWithNameAndId;;
             }
 

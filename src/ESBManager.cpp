@@ -353,8 +353,8 @@ std::string _ESBManager::ESBManager::BuildBundlesToStart(std::map<std::string, _
             if((bundle->spring != "Started") && (bundle->spring != "Waiting"))
             {
                 bundleStartIdString += bundle->id + " ";
-                bundle->incrementReStartCount();
-                bundle->addRestartAttemptTime(std::chrono::milliseconds);
+                bundle->IncrementRestartCount();
+                bundle->SetLastRestartTime(std::chrono::milliseconds);
             }
         }
     }
@@ -368,8 +368,8 @@ std::string _ESBManager::ESBManager::BuildBundlesToStart(std::map<std::string, _
             if((bundle->spring != "Started") && (bundle->spring != "Waiting"))
             {
                 bundleStartIdString += bundle->id + " ";
-                bundle->incrementReStartCount();
-                bundle->addRestartAttemptTime(std::chrono::milliseconds);
+                bundle->IncrementRestartCount();
+                bundle->SetLastRestartTime(std::chrono::milliseconds);
             }
         }
     }

@@ -12,11 +12,11 @@ LD = g++
 WINDRES = windres
 
 INC = 
-CFLAGS = -Wall -fexceptions
+CFLAGS = -Wall -fexceptions -static-libgcc -static-libstdc++ -std=c++11
 RESINC = 
 LIBDIR = 
 LIB = 
-LDFLAGS = -static-libgcc -static-libstdc++
+LDFLAGS = 
 
 INC_DEBUG = $(INC) -Iinclude -IC:\\boost_1_65_1
 CFLAGS_DEBUG = $(CFLAGS) -g

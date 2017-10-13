@@ -10,8 +10,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="ESB-related Projects">
+            <file>file:/C:/Super/carnegie-osgi-manager/nbproject/private/launcher.properties</file>
             <file>file:/C:/Super/carnegie-osgi-manager/src/server.cpp</file>
             <file>file:/C:/Super/carnegie-osgi-manager/include/server.h</file>
+            <file>file:/C:/Super/carnegie-osgi-manager/include/request_handler.h</file>
+            <file>file:/C:/Super/carnegie-osgi-manager/include/connection.h</file>
+            <file>file:/C:/Super/carnegie-osgi-manager/include/request_parser.h</file>
+            <file>file:/C:/Super/carnegie-osgi-manager/Makefile</file>
         </group>
     </open-files>
 </project-private>
