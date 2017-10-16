@@ -17,11 +17,11 @@ AppStatusHandler::~AppStatusHandler()
     //dtor
 }
 
-std::string AppStatusHandler::handle(http::server::request request)
-{
-    _ESBManager::SystemInfo systemInfo = _ESBManager::ESBManager::getCurrentSystemInfo();
-    rapidjson::Document document;
-    document.SetObject();
+//std::string AppStatusHandler::handle(http::server::request request)
+//{
+//    _ESBManager::SystemInfo systemInfo = _ESBManager::ESBManager::getCurrentSystemInfo();
+//    rapidjson::Document document;
+//    document.SetObject();
 
 //    rapidjson::Value array(rapidjson::kArrayType);
 //    rapidjson::Document::AllocatorType& allocator = document.GetAllocator();
@@ -47,9 +47,9 @@ std::string AppStatusHandler::handle(http::server::request request)
 //    document.AddMember("vendor", systemInfo.vendor, allocator);
 //    document.AddMember("version", systemInfo.version, allocator);
 
-    rapidjson::StringBuffer buffer;
-    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
-    document.Accept(writer);
-
-    return buffer.GetString();
-}
+//    rapidjson::StringBuffer buffer;
+//    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+//    document.Accept(writer);
+//
+//    return buffer.GetString();
+//}

@@ -2,7 +2,11 @@
 #define BUNDLE_H
 
 #include <string>
+#include <chrono>
+#include <ctime>
 #include <ratio>
+
+
 namespace _ESBManager
 {
     class Bundle
@@ -28,11 +32,11 @@ namespace _ESBManager
                 return accummulatedTimeBeforeRepair;
             }
 
-            void SetLastRestartTime(std::chrono::duration<int64_t, std::milli> lastRestartTime) {
+            void SetLastRestartTime(std::chrono::time_point<std::chrono::system_clock> lastRestartTime) {
                 this->lastRestartTime = lastRestartTime;
             }
 
-            std::chrono::duration<int64_t, std::milli> GetLastRestartTime() const {
+            std::chrono::time_point<std::chrono::system_clock> GetLastRestartTime() const {
                 return lastRestartTime;
             }
 
@@ -97,8 +101,8 @@ namespace _ESBManager
 
         private:
             int restartCount;
-            std::chrono::duration<int64_t, std::milli>  lastRestartTime, 
-                                                        accummulatedTimeBeforeRepair, 
+            std::chrono::time_point<std::chrono::system_clock> lastRestartTime;
+            std::chrono::duration<int64_t, std::milli>  accummulatedTimeBeforeRepair, 
                                                         accumulatedTimeBeforFailure;
     };
 }

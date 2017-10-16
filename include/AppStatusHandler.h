@@ -12,7 +12,7 @@ class AppStatusHandler : public requestHandle
         AppStatusHandler();
         virtual ~AppStatusHandler();
 
-        std::string handle(http::server::request request);
+        //std::string handle(http::server::request request);
     protected:
 
     private:

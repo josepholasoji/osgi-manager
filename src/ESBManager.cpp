@@ -76,7 +76,10 @@ std::string              _ESBManager::ESBManager::bundlesToStart  = "";
 std::string              _ESBManager::ESBManager::bundlesToStop   = "";
 bool                     _ESBManager::ESBManager::startWholly     = false;
 
-std::map<std::string,_ESBManager::Bundle> bundlesWithNameAndId;
+std::map<std::string,_ESBManager::Bundle*> _ESBManager::ESBManager::bundlesWithNameAndId;
+std::vector<std::string> _ESBManager::ESBManager::deadBundles;
+std::vector<std::string> _ESBManager::ESBManager::failedBundles;
+std::vector<std::string> _ESBManager::ESBManager::inferBundlesToEscalateByNotitifacation;
 
 _ESBManager::SystemInfo currentSystemInfo;
 _ESBManager::SystemInfo _ESBManager::ESBManager::currentSystemInfo;
@@ -354,7 +357,7 @@ std::string _ESBManager::ESBManager::BuildBundlesToStart(std::map<std::string, _
             {
                 bundleStartIdString += bundle->id + " ";
                 bundle->IncrementRestartCount();
-                bundle->SetLastRestartTime(std::chrono::milliseconds);
+                bundle->SetLastRestartTime(std::chrono::system_clock::now());
             }
         }
     }
@@ -369,7 +372,7 @@ std::string _ESBManager::ESBManager::BuildBundlesToStart(std::map<std::string, _
             {
                 bundleStartIdString += bundle->id + " ";
                 bundle->IncrementRestartCount();
-                bundle->SetLastRestartTime(std::chrono::milliseconds);
+                bundle->SetLastRestartTime(std::chrono::system_clock::now());
             }
         }
     }
@@ -422,7 +425,7 @@ void* _ESBManager::ESBManager::StartMonitorService(void* threadPparam)
                 std::string bundleList  = _ESBManager::ESBManager::FireCommandExecVP(command);
 
                 auto bundles = _ESBManager::ESBManager::MapBundleNamesToBundlesId(bundleList);
-                if(_ESBManager::ESBManager::bundlesWithNameAndId == NULL)
+                if(_ESBManager::ESBManager::bundlesWithNameAndId.empty())
                 {
                        _ESBManager::ESBManager::bundlesWithNameAndId = bundles;
                 }

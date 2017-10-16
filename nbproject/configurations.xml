@@ -3,8 +3,14 @@
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
       <df name="src">
+        <in>AppStatusHandler.cpp</in>
+        <in>Bundle.cpp</in>
+        <in>BundleMetricsHandler.cpp</in>
+        <in>ConnectionManager.cpp</in>
         <in>ESBManager.cpp</in>
         <in>SystemInfo.cpp</in>
+        <in>connection.cpp</in>
+        <in>connection_manager.cpp</in>
         <in>mime_types.cpp</in>
         <in>reply.cpp</in>
         <in>requestHandle.cpp</in>
@@ -12,6 +18,7 @@
         <in>request_parser.cpp</in>
         <in>server.cpp</in>
       </df>
+      <in>main.cpp</in>
     </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -34,7 +41,7 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <flagsDictionary>
-        <element flagsID="0" commonFlags="-std=c++11"/>
+        <element flagsID="0" commonFlags="-std=c++14"/>
       </flagsDictionary>
       <codeAssistance>
       </codeAssistance>
@@ -49,8 +56,10 @@
             <incDir>
               <pElem>include</pElem>
               <pElem>../../boost_1_65_1</pElem>
-              <pElem></pElem>
             </incDir>
+            <undefinedList>
+              <Elem>__STRICT_ANSI__</Elem>
+            </undefinedList>
           </ccTool>
         </makeTool>
         <preBuild>
@@ -58,35 +67,70 @@
           <preBuildCommand></preBuildCommand>
         </preBuild>
       </makefileType>
-      <item path="src/ESBManager.cpp" ex="false" tool="1" flavor2="8">
+      <folder path="0/src">
+        <ccTool>
+          <incDir>
+            <pElem></pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <item path="main.cpp" ex="false" tool="1" flavor2="11">
         <ccTool flags="0">
         </ccTool>
       </item>
-      <item path="src/SystemInfo.cpp" ex="false" tool="1" flavor2="8">
+      <item path="src/AppStatusHandler.cpp" ex="false" tool="1" flavor2="11">
         <ccTool flags="0">
         </ccTool>
       </item>
-      <item path="src/mime_types.cpp" ex="false" tool="1" flavor2="8">
+      <item path="src/Bundle.cpp" ex="false" tool="1" flavor2="11">
         <ccTool flags="0">
         </ccTool>
       </item>
-      <item path="src/reply.cpp" ex="false" tool="1" flavor2="8">
+      <item path="src/BundleMetricsHandler.cpp" ex="false" tool="1" flavor2="11">
         <ccTool flags="0">
         </ccTool>
       </item>
-      <item path="src/requestHandle.cpp" ex="false" tool="1" flavor2="8">
+      <item path="src/ConnectionManager.cpp" ex="false" tool="1" flavor2="11">
         <ccTool flags="0">
         </ccTool>
       </item>
-      <item path="src/request_handler.cpp" ex="false" tool="1" flavor2="8">
+      <item path="src/ESBManager.cpp" ex="false" tool="1" flavor2="11">
         <ccTool flags="0">
         </ccTool>
       </item>
-      <item path="src/request_parser.cpp" ex="false" tool="1" flavor2="8">
+      <item path="src/SystemInfo.cpp" ex="false" tool="1" flavor2="11">
         <ccTool flags="0">
         </ccTool>
       </item>
-      <item path="src/server.cpp" ex="false" tool="1" flavor2="8">
+      <item path="src/connection.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/connection_manager.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/mime_types.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/reply.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/requestHandle.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/request_handler.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/request_parser.cpp" ex="false" tool="1" flavor2="11">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/server.cpp" ex="false" tool="1" flavor2="11">
         <ccTool flags="0">
         </ccTool>
       </item>

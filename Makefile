@@ -12,10 +12,10 @@ LD = g++
 WINDRES = windres
 
 INC = 
-CFLAGS = -Wall -fexceptions -static-libgcc -static-libstdc++ -std=c++11
+CFLAGS = -Wall -fexceptions -static-libgcc -static-libstdc++ -std=c++14 -U__STRICT_ANSI__
 RESINC = 
 LIBDIR = 
-LIB = 
+LIB =  -lwsock32 -lws2_32 -lpthread
 LDFLAGS = 
 
 INC_DEBUG = $(INC) -Iinclude -IC:\\boost_1_65_1
@@ -23,7 +23,7 @@ CFLAGS_DEBUG = $(CFLAGS) -g
 RESINC_DEBUG = $(RESINC)
 RCFLAGS_DEBUG = $(RCFLAGS)
 LIBDIR_DEBUG = $(LIBDIR)
-LIB_DEBUG = $(LIB)
+LIB_DEBUG = $(LIB) C:\\boost_1_65_1\\stage\\lib\\libboost_system-mgw53-mt-d-1_65_1.a
 LDFLAGS_DEBUG = $(LDFLAGS)
 OBJDIR_DEBUG = obj/Debug
 DEP_DEBUG = 
@@ -34,7 +34,7 @@ CFLAGS_RELEASE = $(CFLAGS) -O2
 RESINC_RELEASE = $(RESINC)
 RCFLAGS_RELEASE = $(RCFLAGS)
 LIBDIR_RELEASE = $(LIBDIR)
-LIB_RELEASE = $(LIB)
+LIB_RELEASE = $(LIB) C:\\boost_1_65_1\\stage\\lib\\libboost_system-mgw53-mt-1_65_1.a 
 LDFLAGS_RELEASE = $(LDFLAGS) -s
 OBJDIR_RELEASE = obj/Release
 DEP_RELEASE = 

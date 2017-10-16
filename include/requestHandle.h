@@ -9,7 +9,7 @@ class requestHandle
         requestHandle();
         virtual ~requestHandle();
 
-        virtual std::string handle(std::string schema, std::string method, std::string path);
+        //virtual std::string handle(std::string schema, std::string method, std::string path);
     protected:
 
     private:
