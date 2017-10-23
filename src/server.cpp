@@ -64,8 +64,7 @@ namespace http {
                         }
 
                         if (!ec) {
-                            connection_manager_.start(std::make_shared<connection>(
-                                    std::move(socket_), connection_manager_, request_handler_));
+                            connection_manager_.start(std::make_shared<connection>(std::move(socket_), connection_manager_, request_handler_));
                         }
 
                         do_accept();

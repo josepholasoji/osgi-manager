@@ -11,15 +11,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="ESB-related Projects">
             <file>file:/C:/Super/carnegie-osgi-manager/src/ESBManager.cpp</file>
-            <file>file:/C:/Super/carnegie-osgi-manager/include/Bundle.h</file>
-            <file>file:/C:/Super/carnegie-osgi-manager/Makefile</file>
-            <file>file:/C:/Super/carnegie-osgi-manager/include/ESBManager.h</file>
             <file>file:/C:/Super/carnegie-osgi-manager/src/server.cpp</file>
-            <file>file:/C:/Super/carnegie-osgi-manager/nbproject/private/launcher.properties</file>
-            <file>file:/C:/Super/carnegie-osgi-manager/include/request_handler.h</file>
-            <file>file:/C:/Super/carnegie-osgi-manager/include/request_parser.h</file>
-            <file>file:/C:/Super/carnegie-osgi-manager/include/server.h</file>
-            <file>file:/C:/Super/carnegie-osgi-manager/include/connection.h</file>
+            <file>file:/C:/Super/carnegie-osgi-manager/src/BundleMetricsHandler.cpp</file>
+            <file>file:/C:/Super/carnegie-osgi-manager/src/AppStatusHandler.cpp</file>
+            <file>file:/C:/Super/carnegie-osgi-manager/include/AppStatusHandler.h</file>
+            <file>file:/C:/Super/carnegie-osgi-manager/include/requestHandle.h</file>
+            <file>file:/C:/Super/carnegie-osgi-manager/src/requestHandle.cpp</file>
+            <file>file:/C:/Super/carnegie-osgi-manager/Makefile</file>
         </group>
     </open-files>
 </project-private>

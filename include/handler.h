@@ -1,16 +1,18 @@
-#ifndef requestHandle_H
-#define requestHandle_H
+#ifndef HANDLER_H
+#define HANDLER_H
 
+#include <string>
 
-class requestHandle
+class handler
 {
     public:
-        requestHandle();
-        virtual ~requestHandle();
+        handler();
+        virtual ~handler();
 
+        virtual std::string handle(const void* request, void* response)=0;
     protected:
 
     private:
 };
 
-#endif // requestHandle_H
+#endif // HANDLER_H

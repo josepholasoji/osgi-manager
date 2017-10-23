@@ -34,7 +34,7 @@
 	<iostream>
 	<ESBManager.h>
 
-1502711692 c:\super\carnegie-osgi-manager\include\esbmanager.h
+1507907605 c:\super\carnegie-osgi-manager\include\esbmanager.h
 	<string>
 	<vector>
 	<mutex>
@@ -54,7 +54,7 @@
 
 1500160980 c:\super\carnegie-osgi-manager\include\console_commands.h
 
-1505997932 source:c:\super\carnegie-osgi-manager\src\esbmanager.cpp
+1508336867 source:c:\super\carnegie-osgi-manager\src\esbmanager.cpp
 	<windows.h>
 	"ESBManager.h"
 	"Bundle.h"
@@ -222,8 +222,11 @@
 	<utility>
 	"internal/stack.h"
 
-1499771501 c:\super\carnegie-osgi-manager\include\bundle.h
+1508155459 c:\super\carnegie-osgi-manager\include\bundle.h
 	<string>
+	<chrono>
+	<ctime>
+	<ratio>
 
 1500185051 c:\super\carnegie-osgi-manager\include\systeminfo.h
 	<string>
@@ -234,14 +237,14 @@
 1500186707 source:c:\super\carnegie-osgi-manager\src\systeminfo.cpp
 	"SystemInfo.h"
 
-1505917840 source:c:\super\carnegie-osgi-manager\src\connection.cpp
+1508350459 source:c:\super\carnegie-osgi-manager\src\connection.cpp
 	"connection.h"
 	<utility>
 	<vector>
 	"connection_manager.h"
 	"request_handler.h"
 
-1505931438 c:\super\carnegie-osgi-manager\include\connection.h
+1508350287 c:\super\carnegie-osgi-manager\include\connection.h
 	<array>
 	<memory>
 	<boost/asio.hpp>
@@ -264,8 +267,11 @@
 	<vector>
 	"header.h"
 
-1505917755 c:\super\carnegie-osgi-manager\include\request_handler.h
+1508351911 c:\super\carnegie-osgi-manager\include\request_handler.h
 	<string>
+	<memory>
+	<handler.h>
+	<map>
 
 1505916950 c:\super\carnegie-osgi-manager\include\request_parser.h
 	<tuple>
@@ -283,14 +289,14 @@
 1505915499 c:\super\carnegie-osgi-manager\include\connectionmanager.h
 	<boost/asio.hpp>
 
-1505919780 c:\super\carnegie-osgi-manager\include\server.h
+1507820486 c:\super\carnegie-osgi-manager\include\server.h
 	<boost/asio.hpp>
 	<string>
 	"connection.h"
 	"connection_manager.h"
 	"request_handler.h"
 
-1505919315 source:c:\super\carnegie-osgi-manager\src\mime_types.cpp
+1508355170 source:c:\super\carnegie-osgi-manager\src\mime_types.cpp
 	"mime_types.h"
 
 1505916950 c:\super\carnegie-osgi-manager\include\mime_types.h
@@ -300,21 +306,66 @@
 	"reply.h"
 	<string>
 
-1505919560 source:c:\super\carnegie-osgi-manager\src\request_handler.cpp
+1508352824 source:c:\super\carnegie-osgi-manager\src\request_handler.cpp
 	"request_handler.h"
 	<fstream>
 	<sstream>
+	<memory>
 	<string>
 	"mime_types.h"
 	"reply.h"
+	<map>
 	"request.h"
+	"AppStatusHandler.h"
+	"BundleMetricsHandler.h"
 
-1505919639 source:c:\super\carnegie-osgi-manager\src\request_parser.cpp
+1505999095 source:c:\super\carnegie-osgi-manager\src\request_parser.cpp
 	"request_parser.h"
 	"request.h"
 
-1505996842 source:c:\super\carnegie-osgi-manager\src\server.cpp
+1508331060 source:c:\super\carnegie-osgi-manager\src\server.cpp
 	"server.h"
+	<memory>
+	<iostream>
 	<signal.h>
 	<utility>
+
+1508355036 source:c:\super\carnegie-osgi-manager\src\appstatushandler.cpp
+	"AppStatusHandler.h"
+	<ESBManager.h>
+	"rapidjson/document.h"
+	"rapidjson/writer.h"
+	"rapidjson/stringbuffer.h"
+	"request.h"
+	"reply.h"
+	"mime_types.h"
+
+1508352879 c:\super\carnegie-osgi-manager\include\appstatushandler.h
+	<request_handler.h>
+	<string>
+	<request.h>
+	<reply.h>
+	<handler.h>
+
+1508350563 c:\super\carnegie-osgi-manager\include\requesthandle.h
+	<string>
+
+1508352879 source:c:\super\carnegie-osgi-manager\src\bundlemetricshandler.cpp
+	"BundleMetricsHandler.h"
+	<request.h>
+	<requestHandle.h>
+
+1508352877 c:\super\carnegie-osgi-manager\include\bundlemetricshandler.h
+	<ESBManager.h>
+	<request.h>
+	<handler.h>
+
+1506008659 source:c:\super\carnegie-osgi-manager\src\requesthandle.cpp
+	"requestHandle.h"
+
+1508352879 c:\super\carnegie-osgi-manager\include\handler.h
+	<string>
+
+1508351136 source:c:\super\carnegie-osgi-manager\src\handler.cpp
+	"handler.h"
 

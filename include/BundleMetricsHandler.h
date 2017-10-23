@@ -3,16 +3,16 @@
 
 #include <ESBManager.h>
 #include <request.h>
-#include <requestHandle.h>
+#include <handler.h>
 
 
-class BundleMetricsHandler : public requestHandle
+class BundleMetricsHandler : public handler
 {
     public:
         BundleMetricsHandler();
         virtual ~BundleMetricsHandler();
 
-        std::string handle(http::server::request request);
+        std::string handle(const void*, void*);
     protected:
 
     private:

@@ -489,7 +489,7 @@ void* _ESBManager::ESBManager::StartMonitorService(void* threadPparam)
 
 void* _ESBManager::ESBManager::StartRESTServer(void* threadPparam)
 {
-    http::server::server _server("127.0.0.1", "62204", "/");
+    http::server::server _server("127.0.0.1", "12055", "/");
     _server.run();
 }
 

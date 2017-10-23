@@ -12,6 +12,9 @@
 #define HTTP_REQUEST_HANDLER_HPP
 
 #include <string>
+#include <memory>
+#include <handler.h>
+#include <map>
 
 namespace http
 {
@@ -33,6 +36,8 @@ public:
 
     /// Handle a request and produce a reply.
     void handle_request(const request& req, reply& rep);
+
+    static std::map<std::string, void*> api_handler;
 
 private:
     /// The directory containing the files to be served.

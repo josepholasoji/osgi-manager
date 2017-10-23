@@ -1,11 +1,11 @@
-#include "requestHandle.h"
+#include "handler.h"
 
-requestHandle::requestHandle()
+handler::handler()
 {
     //ctor
 }
 
-requestHandle::~requestHandle()
+handler::~handler()
 {
     //dtor
 }

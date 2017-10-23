@@ -3,13 +3,13 @@
 
 #include <string>
 
-class requestHandle
+class handler
 {
     public:
-        requestHandle();
-        virtual ~requestHandle();
+        handler();
+        virtual ~handler();
 
-        //virtual std::string handle(std::string schema, std::string method, std::string path);
+        virtual std::string handle(void* request, void* response)=0;
     protected:
 
     private:
